@@ -3,6 +3,13 @@
 #include <cmath>
 #include "SupportingMath.h"
 
+Vector3::Vector3()
+{
+	this->x = 0.f;
+	this->y = 0.f;
+	this->z = 0.f;
+}
+
 Vector3::Vector3(float x, float y, float z)
 {
 	this->x = x;
@@ -84,6 +91,11 @@ Vector3 Vector3::GetPerpendiculatOfVectorOntoSelf(Vector3 v)
 	return v - this->GetProjectionOfVectorOntoSelf(v);
 }
 
+Vector3 Vector3::Normalized()
+{
+	return Vector3::NormalizeVector(*this);
+}
+
 float Vector3::GetAngleBetweenVectors(Vector3 a, Vector3 b)
 {
 	//cos@ = P.Q / ||P|| * ||Q||
@@ -91,8 +103,22 @@ float Vector3::GetAngleBetweenVectors(Vector3 a, Vector3 b)
 	return SupportingMath::RadiansToDegrees(acos(planarAngle));
 }
 
+Vector3 Vector3::GetCrossProduct(Vector3 a, Vector3 b)
+{
+	return Vector3(a.y*b.z - a.z*b.y, a.z*b.x - a.x*b.z, a.x-b.y - a.y*b.x);
+}
+
+Vector3 Vector3::GetVectorProduct(Vector3 a, Vector3 b)
+{
+	return Vector3::GetCrossProduct(a, b);
+}
+
+Vector3 Vector3::NormalizeVector(Vector3 v)
+{
+	return v * (1/v.GetMagnitude());
+}
+
 float Vector3::GetDotProduct(Vector3 a, Vector3 b)
 {
 	return (a.x * b.x) + (a.y * b.y) + (a.z * b.z);
 }
-

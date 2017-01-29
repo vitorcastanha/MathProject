@@ -2,7 +2,7 @@
 //
 
 #include "stdafx.h"
-#include "Vector3.h"
+#include "MathClasses/Vector3.h"
 
 int main()
 {
@@ -17,6 +17,9 @@ int main()
 	Vector3 e = Vector3(0.f, 1.f, 0.f);
 
 	float angleBetweenDnE = Vector3::GetAngleBetweenVectors(d, e);
+
+	Vector3 f = Vector3(3,0,0);
+	Vector3 g = d * 3.f;
 
 	int i = 0;
 

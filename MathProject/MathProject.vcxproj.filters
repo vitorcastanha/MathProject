@@ -13,21 +13,27 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\MathClasses">
+      <UniqueIdentifier>{df5c6d5f-4fcb-4588-aec0-07bb034a289f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MathClasses">
+      <UniqueIdentifier>{7c724397-4be2-46ef-80f3-0cf46f2c8e90}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Vector3.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="MathClasses\Vector3.h">
+      <Filter>Header Files\MathClasses</Filter>
     </ClInclude>
-    <ClInclude Include="SupportingMath.h">
+    <ClInclude Include="MathClasses\SupportingMath.h">
+      <Filter>Header Files\MathClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -38,11 +44,11 @@
     <ClCompile Include="MathProject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Vector3.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="MathClasses\SupportingMath.cpp">
+      <Filter>Source Files\MathClasses</Filter>
     </ClCompile>
-    <ClCompile Include="SupportingMath.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="MathClasses\Vector3.cpp">
+      <Filter>Source Files\MathClasses</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
