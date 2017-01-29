@@ -18,10 +18,10 @@
 *.smod
 
 #DEBUG
-*.Debug/*
+*Debug/*
 
 #ipch
-*.ipch/*
+*ipch/*
 
 # Compiled Static libraries
 *.lai
