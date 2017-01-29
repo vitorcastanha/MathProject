@@ -17,6 +17,12 @@
 *.mod
 *.smod
 
+#DEBUG
+*.Debug/*
+
+#ipch
+*.ipch/*
+
 # Compiled Static libraries
 *.lai
 *.la
